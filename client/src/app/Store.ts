@@ -3,10 +3,6 @@ import { BehaviorSubject } from 'rxjs';
 class Store {
   counter = new BehaviorSubject(0);
 
-  getStaticCounter() {
-    return this.counter.getValue();
-  }
-
   modifyCounter(action: string) {
     switch (action) {
       case 'INCREMENT':

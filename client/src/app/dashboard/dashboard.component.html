@@ -1,4 +1,8 @@
-<app-button [title]="'Increment'"></app-button>
-<app-button [title]="'Decrement'"></app-button>
-<app-box-counter></app-box-counter>
-<h2>{{ counter }}</h2>
+<section class="buttons-box">
+  <app-button [title]="'Increment'"></app-button>
+  <app-button [title]="'Decrement'"></app-button>
+</section>
+<app-box-counter class="box-counter"></app-box-counter>
+<section class="small-counter">
+  <h3>Counter in Dasboard: {{ counter }}</h3>
+</section>

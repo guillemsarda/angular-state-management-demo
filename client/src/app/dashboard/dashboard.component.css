@@ -1,0 +1,21 @@
+.buttons-box {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.box-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: black solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.small-counter {
+  background-color: #bee9e8;
+  margin: 10px 0;
+  padding: 20px;
+}
