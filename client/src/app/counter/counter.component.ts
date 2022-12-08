@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+/* Using an Injectable */
+import { StoreService } from '../store.service';
+/* Using a regular Class */
 import Store from '../Store';
 
 @Component({
@@ -7,9 +10,14 @@ import Store from '../Store';
   styleUrls: ['./counter.component.css'],
 })
 export class CounterComponent {
+  constructor(private store: StoreService) {}
+
   counter = 0;
 
   ngOnInit() {
-    Store.counter.subscribe(val => (this.counter = val));
+    /* Injectable: */
+    this.store.counter.subscribe(val => (this.counter = val));
+    /* Class: */
+    // Store.counter.subscribe(val => (this.counter = val));
   }
 }

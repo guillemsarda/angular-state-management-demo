@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { map, tap } from 'rxjs/operators';
+/* Using an Injectable */
+import { StoreService } from '../store.service';
+/* Using a regular Class */
 import Store from '../Store';
 
 @Component({
@@ -9,10 +10,14 @@ import Store from '../Store';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
+  constructor(private store: StoreService) {}
+
   counter = 0;
 
   ngOnInit() {
-    Store.counter.subscribe(val => (this.counter = val));
+    /* Injectable: */
+    this.store.counter.subscribe(val => (this.counter = val));
+    /* Class: */
+    // Store.counter.subscribe(val => (this.counter = val));
   }
 }

@@ -8,7 +8,13 @@ import { ButtonComponent } from './button/button.component';
 import { CounterComponent } from './counter/counter.component';
 import { BoxCounterComponent } from './box-counter/box-counter.component';
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, ButtonComponent, CounterComponent, BoxCounterComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    ButtonComponent,
+    CounterComponent,
+    BoxCounterComponent,
+  ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

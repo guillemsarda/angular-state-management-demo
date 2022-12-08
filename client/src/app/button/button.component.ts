@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+/* Using an Injectable */
+import { StoreService } from '../store.service';
+/* Using a regular Class */
 import Store from '../Store';
 
 @Component({
@@ -9,7 +12,12 @@ import Store from '../Store';
 export class ButtonComponent {
   @Input() title = '';
 
+  constructor(private store: StoreService) {}
+
   modify(action: string) {
-    Store.modifyCounter(action.toUpperCase());
+    /* Injectable: */
+    this.store.modifyCounter(action.toUpperCase());
+    /* Class: */
+    // Store.modifyCounter(action.toUpperCase());
   }
 }
